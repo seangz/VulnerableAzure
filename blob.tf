@@ -11,7 +11,7 @@ resource "azurerm_storage_account" "victim-public-storage" {
 resource "azurerm_storage_container" "victim-public-container" {
   name                  = "test"
   storage_account_name  = azurerm_storage_account.victim-public-storage.name
-  container_access_type = "container"
+  private_access_type = "container"
 }
 
 resource "azurerm_storage_blob" "victim-public-blob" {
